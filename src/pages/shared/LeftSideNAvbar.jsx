@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import CategoryLinks from "./smallComp/CategoryLinks";
 import BottomCard from "./smallComp/BottomCard";
 
-const LeftSideNAvbar = () => {
+const LeftSideNAvbar = ({ news }) => {
   //
   const [categories, setCategories] = useState([]);
-  const [news, setNews] = useState([]);
 
   useEffect(() => {
     fetch("./categories.json")
@@ -14,12 +13,6 @@ const LeftSideNAvbar = () => {
       .catch((err) => console.error(err));
   }, []);
 
-  useEffect(() => {
-    fetch("/news.json")
-      .then((res) => res.json())
-      .then((data) => setNews(data))
-      .catch((err) => console.error(err));
-  }, []);
   //
   return (
     <div>
