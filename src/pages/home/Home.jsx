@@ -3,11 +3,13 @@ import Header from '../shared/Header'
 import Navbar from '../shared/Navbar'
 import LeftSideNAvbar from '../shared/LeftSideNAvbar'
 import RightSideNavbar from '../shared/RightSideNavbar'
+import BreakingNews from './BreakingNews'
 
 const Home = () => {
   return (
     <div>
      <Header/>
+     <BreakingNews/>
      <Navbar/>
      Home
      <div className='grid md:grid-cols-4 gap-6'>
