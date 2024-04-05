@@ -1,11 +1,14 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React from "react";
+import { useParams } from "react-router-dom";
 
 const NewsPage = () => {
-     const{id}=useParams()
+  const { id } = useParams();
   return (
-    <div>NewsPage</div>
-  )
-}
+    <div>
+      NewsPage
+      <p>{id}</p>
+    </div>
+  );
+};
 
-export default NewsPage
+export default NewsPage;
