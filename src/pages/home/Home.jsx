@@ -5,16 +5,19 @@ import LeftSideNAvbar from "../shared/LeftSideNAvbar";
 import RightSideNavbar from "../shared/RightSideNavbar";
 import BreakingNews from "./BreakingNews";
 import MiddleComp from "../shared/MiddleComp";
+import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
-  const [news, setNews] = useState([]);
+  // const [news, setNews] = useState([]);
 
-  useEffect(() => {
-    fetch("/news.json")
-      .then((res) => res.json())
-      .then((data) => setNews(data))
-      .catch((err) => console.error(err));
-  }, []);
+  // useEffect(() => {
+  //   fetch("/news.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setNews(data))
+  //     .catch((err) => console.error(err));
+  // }, []);
+  const news = useLoaderData();
+
   return (
     <div>
       <Header />
